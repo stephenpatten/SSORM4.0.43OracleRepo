@@ -17,12 +17,13 @@ namespace WebApplication5.ServiceInterface
         public object Any(Hello request)
         {
             //Issue 1 
-
-/*            var campaign = new Campaign();
+            
+            //This now fails. 
+            var campaign = new Campaign();
             campaign.TrackingId = 0;
             campaign.CampaignPhone = "none";
-            campaign.CostAmount = 0;
-            campaign.EndDate = 0;
+            campaign.CostAmount = 0M;
+            campaign.EndDate = 0L;
             campaign.StartDate = SystemClock.Instance.Now.Ticks / NodaConstants.TicksPerMillisecond;
             campaign.FixedCost = 0M;
             campaign.IsActive = true;
@@ -42,7 +43,7 @@ namespace WebApplication5.ServiceInterface
             campaign.IsDefaultCampaign = false;
             campaign.IsActive = true;
 
-            var rowId = Db.Insert(campaign, true);*/
+            var rowId = Db.Insert(campaign, true);
             
 
 
